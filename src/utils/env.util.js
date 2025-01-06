@@ -20,6 +20,7 @@ export const DB_SCHEMA = secrets?.DB_SCHEMA || process.env.DB_SCHEMA;
 export const DB_USERNAME = secrets?.DB_USERNAME || process.env.DB_USERNAME;
 export const DB_PASSWORD = secrets?.DB_PASSWORD || process.env.DB_PASSWORD;
 
+export const JWT_SECRET = secrets?.JWT_SECRET || process.env.JWT_SECRET;
 export const API_KEY = secrets?.API_KEY || process.env.API_KEY;
 export const TZ = secrets?.TZ || process.env.TZ || "Asia/Jakarta";
 export const PORT = process.env.PORT || 5000;

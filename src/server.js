@@ -8,6 +8,7 @@ import {
   CORS_HEADER,
   CORS_METHOD,
 } from "./utils/env.util.js";
+import { routerV1 } from "./routes/index.js";
 
 // create instance of express
 const app = express();
@@ -27,6 +28,9 @@ app.use(morgan(morganFormat));
 
 // incoming request parser
 app.use(express.json());
+
+// create router
+app.use("/api/v1/", routerV1);
 
 // get port from environment variable, if not exist then use default port 5000
 const port = PORT;
