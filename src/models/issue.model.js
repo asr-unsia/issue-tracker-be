@@ -37,9 +37,11 @@ export default (sequelize, DataTypes) => {
     });
     Issue.belongsTo(models.User, {
       foreignKey: "requesterId",
+      as: "requester",
     });
     Issue.belongsTo(models.User, {
       foreignKey: "resolverId",
+      as: "resolver",
     });
   };
 
